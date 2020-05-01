@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+
+<div class="container-1">
+    <form action="{% url 'accounts:register' %}" class="form-group" method="post">
+        {% csrf_token %}
+
+        <div class="flex-box-container-1">
+            <label>
+                <input type="text" placeholder="First Name" name="first_name">
+            </label>
+        </div>
+
+        <div class="flex-box-container-1">
+            <label><input type="text" name="last_name" placeholder="Last Name"></label>
+        </div>
+
+        <div class="flex-box-container-1">
+            <label><input type="email" name="email" placeholder="email"></label>
+        </div>
+
+        <div class="flex-box-container-1">
+            <label><input type="text" name="username" placeholder="Usename"></label>
+        </div>
+
+        <div class="flex-box-container-1">
+            <label><input type="password" name="pswd1" placeholder="Password"></label>
+        </div>
+
+        <div class="flex-box-container-1">
+            <label><input type="password" name="pswd2" placeholder="Password(again)"></label>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

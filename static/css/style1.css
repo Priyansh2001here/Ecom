@@ -1,0 +1,11 @@
+.container-1{;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.flex-box-container-1{
+    display: flex;
+    padding: 2px;
+    justify-content: left;
+    flex-direction: row;
+}
